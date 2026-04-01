@@ -1,0 +1,6 @@
+---
+title: "Ignore this file"
+format: html
+---
+
+I want git to ignore this file.
