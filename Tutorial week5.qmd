@@ -76,3 +76,13 @@ penguins |>
 ![This is a koala.](koala.png){width=200}
 
 [![This is an Adelie penguin.](https://cdn.britannica.com/77/81277-050-2A6A35B2/Adelie-penguin.jpg?w=300)](https://en.wikipedia.org/wiki/Ad%C3%A9lie_penguin)
+
+## how to add image
+begin with ! follow by a caption within '[]' and image file in '()'
+this is when an image is saved within a local file
+
+begin with ! follow by a caption within '[]' and image url in '()'
+this is when an image is not saved within a local file, and we will use an image url instead
+
+### to make an image a clickable link
+#### [![caption](link or image file)](url link that we want the image to link to)
