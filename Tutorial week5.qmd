@@ -1,0 +1,47 @@
+---
+title: "Tutorial 4 week5"
+format: html
+bibliography: references.bib
+---
+
+
+```{r}
+#| label: fig-penguins-scatter
+#| fig-cap: "Body mass vs. Flipper length for three penguin species."
+#| warning: false
+library(ggplot2)
+library(palmerpenguins)
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() +
+  theme_minimal()
+```
+
+@fig-penguins-scatter illustrates the relationship between flipper lenght and body mass between different pengiun species.
+
+
+```{r}
+#| label: tbl-penguin-summary
+#| tbl-cap: "Mean body mass of penguins by species and sex."
+#| warning: false
+#| echo: false
+library(dplyr)
+
+penguins |>
+  filter(!is.na(sex)) |>
+  group_by(species, sex) |>
+  summarise(mean_mass = mean(body_mass_g)) |>
+  knitr::kable()
+```
+
+@tbl-penguin-summary summarises the average body mass of penguins by sex and species. 
+Try to avoid using space in table or figure name. Use '@' follows by figure/table names to reference them.
+
+## Reference
+This dataset is sourced from [@penguin_data]
+
+This dataset is sourced from @penguin_data
+
+It works with or without '[]' but without the '[]' the name of the author will not be within a '()'. can be used like below;
+
+@penguin_data argued that penguins xxx.
