@@ -86,3 +86,5 @@ this is when an image is not saved within a local file, and we will use an image
 
 ### to make an image a clickable link
 #### [![caption](link or image file)](url link that we want the image to link to)
+
+#### use zbib.org to create a citation to put in a .bib file, paste a url and select BibTex then copy and paste in a .bib file
