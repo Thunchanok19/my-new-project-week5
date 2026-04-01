@@ -45,3 +45,34 @@ This dataset is sourced from @penguin_data
 It works with or without '[]' but without the '[]' the name of the author will not be within a '()'. can be used like below;
 
 @penguin_data argued that penguins xxx.
+
+## More figures
+
+```{r}
+#| label: fig-penguins-species
+#| fig-cap: "Bill length vs Body mass by species"
+#| warning: false
+#| echo: false
+data(penguins)
+View(penguins)
+
+ggplot(penguins,aes(x = bill_length_mm, y = body_mass_g, color = species)) +
+    geom_point()
+```
+
+
+```{r}
+#| label: tbl-penguin-summary-by-island
+#| tbl-cap: "Summary penguin by island and species"
+#| warning: false
+#| echo: false
+
+penguins |>
+  group_by(species, island) |>
+  summarise(avg_mass = mean(body_mass_g, na.rm = TRUE), avg_flipper = mean(flipper_length_mm, na.rm = TRUE), count = n()) |>
+  knitr::kable()
+```
+
+![This is a koala.](koala.png){width=200}
+
+[![This is an Adelie penguin.](https://cdn.britannica.com/77/81277-050-2A6A35B2/Adelie-penguin.jpg?w=300)](https://en.wikipedia.org/wiki/Ad%C3%A9lie_penguin)
