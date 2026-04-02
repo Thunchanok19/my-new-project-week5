@@ -10,3 +10,4 @@ I want git to ignore this file.
 
 
 Create another stash
+Now don't ignore this file
